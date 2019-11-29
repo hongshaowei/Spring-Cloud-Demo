@@ -6,3 +6,15 @@
 .es-white {
 	color: #fff;
 }
+
+.btn-logout {
+	color: #fff;
+	background-color: #009d96;
+	border-color: #ffffff;
+}
+
+.btn-logout:hover, .btn-logout:focus, .btn-logout:active:hover {
+	color: #009d96;
+	background-color: #ffffff;
+	border-color: #009d96;
+}
