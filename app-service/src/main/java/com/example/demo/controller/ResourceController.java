@@ -3,15 +3,14 @@ package com.example.demo.controller;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ResourceController {
 
-	@PostMapping("/apps/{id}")
-	public Map<String, String> fetchAppsById(@PathVariable String id) {
+	@GetMapping("/apps")
+	public Map<String, String> fetchAppsById() {
 		Map<String, String> apps = new HashMap<>();
 		apps.put("原始碼比對作業", "111");
 		apps.put("信用卡系統參數中心[EsunParam]", "222");

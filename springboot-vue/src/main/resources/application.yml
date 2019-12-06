@@ -1,3 +1,6 @@
+server:
+  port: 9998
+
 spring:
     mvc:
         static-path-pattern: /**
