@@ -3,12 +3,20 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'Home',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      apps: null
     }
+  },
+  created () {
+    axios.get('http://localhost:8080/app-service/apps')
+      .then(resp => {
+        this.apps = resp.data
+      })
   }
 }
 </script>
