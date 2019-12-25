@@ -29,7 +29,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests()
+		http
+//			.authorizeRequests()
+//	        .antMatchers("/**").permitAll()
+//	        .anyRequest().authenticated()
+//	        .and()
+//	        .formLogin()
+//	        .loginProcessingUrl("/login")
+//	        .usernameParameter("adAcc")
+//	        .passwordParameter("adPwd")
+//	        .successHandler(new AuthSuccessHandler())
+//	        .failureHandler(new AuthFailureHandler())
+//	        .and()
+//	        .exceptionHandling()
+//	        .authenticationEntryPoint(new AuthEntryPoint());
+	        
+		
+			.authorizeRequests()
 			.anyRequest()
 			.authenticated()
 			.and()
@@ -42,6 +58,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.and()
 			.exceptionHandling()
 			.authenticationEntryPoint(new AuthEntryPoint())
+			.and()
+			.cors()
 			.and()
 			.csrf()
 			.disable();
